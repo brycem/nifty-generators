@@ -8,7 +8,7 @@ describe <%= plural_class_name %>Controller do
   end
   
   def invalid_<%= singular_name %>
-    @<%= singular_name %> = Factory.build(:<%= singular_name %>, <%= attributes.first.name.to_sym  => nil %>)
+    @<%= singular_name %> = Factory.build(:<%= singular_name %>, <%= attributes.first.name.to_sym %> => nil)
   end
   
   <%= controller_methods 'tests/rspec/actions' %>

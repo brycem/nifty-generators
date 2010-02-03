@@ -1,7 +1,7 @@
   describe "UPDATE" do
     it "update action should render edit template when model is invalid" do
       valid_<%= singular_name %>
-      put :update, :id => @<%= singular_name %>.id,  :<%= singular_name %> => Factory.attributes_for(:<%= singular_name %>, <%= attributes.first.name.to_sym  => nil %>)
+      put :update, :id => @<%= singular_name %>.id,  :<%= singular_name %> => Factory.attributes_for(:<%= singular_name %>, <%= attributes.first.name.to_sym %>   => nil)
       response.should render_template(:edit)
     end
   
