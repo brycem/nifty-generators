@@ -6,11 +6,9 @@ describe <%= class_name %> do
   end
   
   describe "validations" do
-    it "should require required fields" do
-      {<%= attributes.map { |a| ":#{a.name} => 1" }.join(", ") %>}.each do |field, num_errors|
-        Factory.build(:singular_name, field => nil).should have(num_errors).errors_on(field)
-      end
-    end
+    <% attributes.each do |attrib| %>
+      it { should validate_presence_if(:<%= attrib %>)}
+    <% end %>
   end
   
   describe "associations" do
