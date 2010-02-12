@@ -5,7 +5,7 @@
     end
   
     it "create action should redirect when model is valid" do
-      post :create, post :create, :<%= singular_name %> => Factory.attributes_for(:<%= singular_name %>)
+      post :create, :<%= singular_name %> => Factory.attributes_for(:<%= singular_name %>)
       response.should redirect_to(<%= item_path_for_spec('url') %>)
     end
   end
